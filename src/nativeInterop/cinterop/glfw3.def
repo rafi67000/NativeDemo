@@ -1,0 +1,6 @@
+headers = glfw3.h
+package = glfw
+
+libraryPaths.linux = build/lib/glfw/src/lib
+compilerOpts.linux = -DGL_GLEXT_PROTOTYPES -I/usr/include -I/usr/include/GLFW -I/usr/local/include
+linkerOpts.linux = -L/usr/lib64 -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -ldl -lm -lGL -lGLU -lX11 -lglfw --allow-shlib-undefined
