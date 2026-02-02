@@ -14,11 +14,11 @@ repositories { mavenCentral() }
 kotlin {
 	linuxX64 {
 		compilations["main"].cinterops {
-            create("glfw3")
-//            create("opengl")
+			create("glfw3")
+			//            create("opengl")
 			create("spng")
 
-            configureEach { extraOpts += listOf("-Xccall-mode", "direct") }
+			configureEach { extraOpts += listOf("-Xccall-mode", "direct") }
 		}
 
 		binaries { executable() }
@@ -29,7 +29,6 @@ kotlin {
 			dependencies { implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2") }
 		}
 	}
-
 }
 
 fun BaseKotlinExtension.apply() {
