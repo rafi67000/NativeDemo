@@ -15,7 +15,6 @@ kotlin {
 	linuxX64 {
 		compilations["main"].cinterops {
 			create("glfw3")
-			//            create("opengl")
 			create("spng")
 
 			configureEach { extraOpts += listOf("-Xccall-mode", "direct") }
@@ -38,10 +37,6 @@ fun BaseKotlinExtension.apply() {
 }
 
 spotless {
-
-	//    yaml {  }
-	//    sql {  }
-
 	kotlin {
 		target("src/**/*.kt") // so spotless applies to multiplatform
 		apply()
